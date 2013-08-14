@@ -1,0 +1,64 @@
+.ai-subtitle {
+	font-weight: bold;
+	font-size: 12px;
+	margin-bottom: -7px;
+}
+
+.ai-value {
+	font-size:14px;
+}
+
+.ai-btn-small {
+	font-size:12px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+.ai-icon {
+	margin-bottom:10px;
+}
+
+.ai-container {
+	clear:both;
+	margin-top:5px;
+}
+
+.ai-list {
+	margin-top:3px;
+}
+
+.ai-title {
+	margin-top:-10px;
+}
+
+.ai-description {
+	margin-top:-13px;
+}
+
+.ai-left {
+	float: left;
+	width: 120px;
+	margin-right: 15px;
+}
+
+@media all and (min-width: 920px) {
+	.ai-clear {
+		clear:both;
+	}
+
+	.ai-right {
+		float: none;
+		overflow: hidden;
+		display: block;
+	}
+}
+@media all and (max-width: 920px) {
+	.ai-left {
+		width: 100px;
+		overflow: hidden;
+	}
+
+	.ai-title {
+		font-size: 22px;
+	}
+}
