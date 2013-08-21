@@ -7,16 +7,16 @@ AppDetails 2 lets users to display information of mobile apps from the __AppStor
 Download [AppDetails 2](https://github.com/JMasip/AppDetails-for-WordPress/archive/master.zip) as a ZIP file. Then expand "master.zip" and copy "appdetails" folder to WordPress plugin's folder (/wp-content/plugins/). You must rename "config-sample.php" to "config.php" and fill the empty fields.
 ##How to use:
 ###AppStore:
-url: _https://itunes.apple.com/us/app/drugtime/id__657234388___
+url: _https://itunes.apple.com/us/app/drugtime/id657234388_
 
 WP Post syntax: __[app]657234388[/app]__
 ###Google Play Store:
-url: _https://play.google.com/store/apps/details?id=__com.android.chrome___
+url: _https://play.google.com/store/apps/details?id=com.android.chrome_
 
 WP Post syntax: __[app]com.android.chrome[/app]__
 
 ###Windows Store:
-url: _http://apps.microsoft.com/windows/es-es/app/__line/b039ba22-c3af-45b3-aea2-83d612c9bce6___
+url: _http://apps.microsoft.com/windows/es-es/app/line/b039ba22-c3af-45b3-aea2-83d612c9bce6_
 
 WP Post syntax: __[app]line/b039ba22-c3af-45b3-aea2-83d612c9bce6[/app]__
 
