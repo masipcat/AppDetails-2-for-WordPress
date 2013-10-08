@@ -6,7 +6,7 @@
 	Version: 2.0.1
 	Author: Jordi Masip i Riera
 	Author URI: http://jordi.masip.cat/
-	License: GPL2
+	License: MIT
 	*/
 
 	//ini_set('display_errors', 1);
