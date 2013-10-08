@@ -3,7 +3,7 @@
 	Plugin Name: AppDetails 2
 	Plugin URI: http://jordi.masip.cat/
 	Description: Get easily the description of an app from the AppStore or Google Play. How to use: 1) Google Play: <strong>[app]com.android.chrome[/app]</strong> <em>(https://play.google.com/store/apps/details?id=<strong>com.android.chrome</strong>&hl=ca)</em>. 2) AppStore: <strong>[app]535886823[/app]</strong> <em>(https://itunes.apple.com/en/app/chrome/id<strong>535886823</strong>?mt=8)</em> 3) Windows Phone: <strong>[app]vimeo/ff8dadc8-8efd-42c7-a0f4-de7a48dd186b[/app]</strong> <em>(http://www.windowsphone.com/es-es/store/app/<strong>vimeo/ff8dadc8-8efd-42c7-a0f4-de7a48dd186b</strong>)</em>
-	Version: 2.0 RC1
+	Version: 2.0.1
 	Author: Jordi Masip i Riera
 	Author URI: http://jordi.masip.cat/
 	License: GPL2

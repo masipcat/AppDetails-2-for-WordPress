@@ -151,7 +151,7 @@
 	}
 
 	function getGooglePlayAppInfo($bundleId) {
-		$url = "http://dev.appaware.com/1/app/show.json?p=" . $bundleId . "&client_token=" . $AD_APPAWARE_CLIENT_TOKEN;		
+		$url = "http://42matters.com/api/1/apps/lookup.json?p=" . $bundleId . "&access_token=" . $AD_APPAWARE_CLIENT_TOKEN;		
 		return json_decode(file_get_contents($url));
 	}
 
