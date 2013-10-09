@@ -4,7 +4,7 @@ AppDetails 2 for WordPress
 ##What is it?
 AppDetails 2 lets users to display information of mobile apps from the __AppStore__, __Google Play Store__ and __Windows Store__ easily in a WordPress blog.
 ##How to install:
-Download [AppDetails 2](https://github.com/JMasip/AppDetails-for-WordPress/archive/master.zip) as a ZIP file. Then expand "master.zip" and copy "appdetails" folder to WordPress plugin's folder (/wp-content/plugins/). You must rename "config-sample.php" to "config.php" and fill the empty fields.
+Download [AppDetails 2](https://github.com/JMasip/AppDetails-for-WordPress/archive/master.zip) as a ZIP file. Then expand "master.zip" and copy "appdetails" folder to WordPress plugin's folder (/wp-content/plugins/). You must rename "config-sample.php" to "config.php" and fill the empty fields. This plugin requires PHP 5.3+.
 ##How to use:
 ###AppStore:
 url: _https://itunes.apple.com/us/app/drugtime/id657234388_

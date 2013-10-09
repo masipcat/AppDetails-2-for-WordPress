@@ -3,7 +3,7 @@
 	Plugin Name: AppDetails 2
 	Plugin URI: http://jordi.masip.cat/
 	Description: Get easily the description of an app from the AppStore or Google Play. How to use: 1) Google Play: <strong>[app]com.android.chrome[/app]</strong> <em>(https://play.google.com/store/apps/details?id=<strong>com.android.chrome</strong>&hl=ca)</em>. 2) AppStore: <strong>[app]535886823[/app]</strong> <em>(https://itunes.apple.com/en/app/chrome/id<strong>535886823</strong>?mt=8)</em> 3) Windows Phone: <strong>[app]vimeo/ff8dadc8-8efd-42c7-a0f4-de7a48dd186b[/app]</strong> <em>(http://www.windowsphone.com/es-es/store/app/<strong>vimeo/ff8dadc8-8efd-42c7-a0f4-de7a48dd186b</strong>)</em>
-	Version: 2.0.1
+	Version: 2.0.2
 	Author: Jordi Masip i Riera
 	Author URI: http://jordi.masip.cat/
 	License: MIT
@@ -40,32 +40,30 @@
 
 $text .= <<<END
 <script type="text/javascript">
-(function () {
-	function showAppInfo() {
-		var template = '$template', template_translation = eval("(" + "$template_translation" + ")");
-		for(key in template_translation) {
-			template = template.replace(key, template_translation[key]);
-		}
-		var $ = jQuery, urls = $urls, i = 0;
-		window.app_info = document.getElementsByClassName("ai-container");
-		window.app_info_count = 0;
-		for(i = 0; i < urls.length; i++) {
-			$.getJSON(urls[i], function(data) {
-				var app_info = window.app_info, new_template = template, k = 0;
-				for(key in data) {
-					new_template = new_template.replace("{{" + key + "}}", data[key]);
-				}
-				app_info[window.app_info_count].innerHTML = new_template;
-				window.app_info_count += 1;
-			});
-		}
+window.AD_showAppInfo = function() {
+	var template = '$template', template_translation = eval("(" + "$template_translation" + ")");
+	for(key in template_translation) {
+		template = template.replace(key, template_translation[key]);
 	}
-	if (typeof jQuery == 'undefined') {
-	    window.addEventListener("load", showAppInfo);
-	} else {
-	    showAppInfo();
+	var $ = jQuery, urls = $urls, i = 0;
+	window.app_info = document.getElementsByClassName("ai-container");
+	window.app_info_count = 0;
+	for(i = 0; i < urls.length; i++) {
+		$.getJSON(urls[i], function(data) {
+			var app_info = window.app_info, new_template = template, k = 0;
+			for(key in data) {
+				new_template = new_template.replace("{{" + key + "}}", data[key]);
+			}
+			app_info[window.app_info_count].innerHTML = new_template;
+			window.app_info_count += 1;
+		});
 	}
-})();
+}
+if (typeof jQuery == 'undefined') {
+    window.addEventListener("load", window.AD_showAppInfo);
+} else {
+    window.AD_showAppInfo();
+}
 </script>
 END;
 		}

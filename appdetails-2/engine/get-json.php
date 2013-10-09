@@ -119,15 +119,18 @@
 		$summary = $info[0]->children(0)->children(3);
 		$details = $info[0]->children(0)->children(4);
 
+		$price = explode(" ", $summary->children(1)->children(0)->children(0)->innertext);
+		$rating = explode(" ", $summary->children(1)->getElementById("rating")->children(2)->getAttribute("class"));
+
 		$json = array(
 			"store" => "WindowsPhoneStore",
 			"store_url" => $url,
 			"title" => $info[0]->children(0)->children(1)->innertext,
 			"description" => str_replace("&#10;", "<br />", $details->getElementById("appDescription")->children(0)->children(0)->innertext),
 			"icon" => $summary->children(0)->children(0)->getAttribute("src"),
-			"price" => (float) str_replace(",", ".", explode(" ", $summary->children(1)->children(0)->children(0)->innertext)[0]),
+			"price" => (float) str_replace(",", ".",  $price[0]),
 			"formatted_price" => $summary->children(1)->children(0)->children(0)->innertext,
-			"rating" => explode("Pt", explode(" ", $summary->children(1)->getElementById("rating")->children(2)->getAttribute("class"))[1]),
+			"rating" => explode("Pt", $rating[1]),
 			"size" => $summary->children(4)->getElementById("packageSize")->children(1)->innertext,
 			"version" => $summary->children(4)->getElementById("version")->children(1)->innertext,
 			"company" => $summary->children(4)->getElementById("publisher")->children(1)->innertext,
